@@ -3,12 +3,7 @@ import uuid
 import tempfile
 import whisper
 
-# Pilihan model: "tiny", "base", "small", "medium", "large", "large-v2", "large-v3", "turbo"
-# Sesuaikan dengan kemampuan perangkat:
-#   - CPU terbatas  → "base" atau "small"
-#   - CPU memadai   → "medium" atau "large-v3-turbo"
 WHISPER_MODEL_NAME = os.getenv("WHISPER_MODEL", "large-v3-turbo")
-# Di file .env diset: WHISPER_MODEL=medium  (atau large-v3-turbo jika perangkat kuat)
 
 # Load model sekali saat modul diimport (agar tidak reload setiap request)
 print(f"[STT] Memuat model Whisper: {WHISPER_MODEL_NAME} ...")
@@ -29,11 +24,7 @@ def transcribe_speech_to_text(file_bytes: bytes, file_ext: str = ".wav") -> str:
         str: Teks hasil transkripsi (bisa campuran ID/EN/AR),
              atau pesan error jika gagal.
     """
-    # ── FIX #2 ───────────────────────────────────────────────────────────────
-    # initial_prompt membantu Whisper "tahu" bahwa audio ini code-switching.
-    # Prompt ini tidak muncul di output, hanya jadi konteks internal model.
-    # Referensi: https://github.com/openai/whisper#python-usage
-    # ─────────────────────────────────────────────────────────────────────────
+
     MULTILINGUAL_PROMPT = (
         "Percakapan ini mengandung campuran Bahasa Indonesia, Bahasa Inggris, "
         "dan Bahasa Arab. Transkripsi semua kata sesuai bahasa aslinya. "
@@ -49,9 +40,9 @@ def transcribe_speech_to_text(file_bytes: bytes, file_ext: str = ".wav") -> str:
         try:
             result = _model.transcribe(
                 audio_path,
-                language=None,                   # auto-detect, bukan hardcode "id"
-                task="transcribe",               # pertahankan bahasa asli (bukan translate)
-                initial_prompt=MULTILINGUAL_PROMPT,  # bantu Whisper kenali code-switching
+                language=None,                  
+                task="transcribe",               
+                initial_prompt=MULTILINGUAL_PROMPT,  
                 fp16=False,                     
             )
             

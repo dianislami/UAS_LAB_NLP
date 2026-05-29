@@ -124,7 +124,7 @@ print(f"[LLM] Aktif → Gemini key #1, model: {_current_model}")
 print(f"[LLM] Mode output: {DEFAULT_LLM_MODE}")
 
 # ─────────────────────────────────────────────
-# Simpan / muat history (Gemini only)
+# Simpan / muat history
 # ─────────────────────────────────────────────
 def export_chat_history(c) -> str:
     return history_adapter.dump_json(c.get_history()).decode("utf-8")
@@ -190,9 +190,6 @@ def _parse_retry_wait(err_str: str) -> int:
 
 # ─────────────────────────────────────────────
 # Fungsi utama: generate response
-# FIX #3: tambah parameter mode untuk memilih antara
-#   "preserve_cs" → pertahankan pola code-switching
-#   "normalized"  → normalisasi ke Bahasa Indonesia baku
 # ─────────────────────────────────────────────
 def generate_response(prompt: str, mode: str = None) -> str:
     """

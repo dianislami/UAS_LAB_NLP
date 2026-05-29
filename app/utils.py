@@ -1,14 +1,3 @@
-"""
-utils.py — Utilitas umum untuk pipeline Voice Chatbot.
-
-Berisi fungsi-fungsi pembantu untuk:
-- Konversi & validasi audio
-- Normalisasi teks sebelum dikirim ke LLM / TTS
-- Language tagging untuk code-switching ID-EN-AR
-- Pembersihan file temporer
-- Logging sederhana
-"""
-
 import os
 import re
 import uuid
@@ -131,7 +120,7 @@ def normalize_text(text: str) -> str:
 
 
 # ─────────────────────────────────────────────
-# FIX #4: Language Tagging untuk Code-Switching
+# Language Tagging untuk Code-Switching
 # ─────────────────────────────────────────────
 
 # Pola deteksi bahasa berdasarkan karakter

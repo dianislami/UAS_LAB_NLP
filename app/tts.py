@@ -12,7 +12,7 @@ COQUI_SPEAKER     = "wibowo"
 
 
 # ─────────────────────────────────────────────
-# Singleton TTS instance — load sekali, pakai terus
+# Singleton TTS instance 
 # ─────────────────────────────────────────────
 _tts_instance = None
 
@@ -43,7 +43,7 @@ def _has_arabic(text: str) -> bool:
 
 
 # ─────────────────────────────────────────────
-# Phoneme conversion — Bahasa Indonesia
+# Phoneme conversion - Bahasa Indonesia
 # ─────────────────────────────────────────────
 def _id_text_to_phoneme(text: str) -> str:
     text = text.lower()
@@ -145,7 +145,7 @@ def prepare_tts_text(text: str) -> str:
 
 
 # ─────────────────────────────────────────────
-# Public function — dipanggil dari luar
+# Public function - dipanggil dari luar
 # ─────────────────────────────────────────────
 def transcribe_text_to_speech(text: str) -> str:
     prepared = prepare_tts_text(text)

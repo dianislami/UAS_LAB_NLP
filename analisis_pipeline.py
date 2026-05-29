@@ -1,18 +1,3 @@
-"""
-analisis_pipeline.py — Uji coba keseluruhan pipeline terhadap corpus audio.
-
-Memproses semua file audio di:
-  - data/corpus/audio/A/
-  - data/corpus/audio/B/
-
-Pipeline per file:
-  Audio → STT (Whisper) → Language Tagging → LLM (Gemini) → TTS (Coqui) → Output audio
-
-Hasil disimpan di:
-  - log/pipeline_results.json  (detail per file)
-  - log/pipeline_summary.txt   (ringkasan evaluasi + WER/CER)
-"""
-
 import os
 import sys
 import json
@@ -34,7 +19,7 @@ from tts   import transcribe_text_to_speech
 from utils import (
     normalize_text, clean_llm_response, truncate_text,
     logger, cleanup_file,
-    detect_languages, build_tagged_prompt,   # FIX #4: language tagging
+    detect_languages, build_tagged_prompt,   
 )
 
 # ─────────────────────────────────────────────
@@ -50,9 +35,6 @@ RESULTS_FILE     = os.path.join(LOG_DIR, "pipeline_results.json")
 SUMMARY_FILE     = os.path.join(LOG_DIR, "pipeline_summary.txt")
 TRANSCRIPT_DIR   = os.path.join(BASE_DIR, "data", "corpus", "transcripts")
 
-# FIX #8: folder ground truth untuk evaluasi WER/CER
-# Letakkan file .txt dengan nama sama persis dengan audio di folder ini
-# Contoh: 2030_audio01.wav → ground_truth/2030_audio01.txt
 GROUND_TRUTH_DIR = os.path.join(BASE_DIR, "data", "corpus", "transcripts", "ground_truth")
 
 # Format audio yang didukung
@@ -121,14 +103,14 @@ def process_single_audio(audio_path: str) -> dict:
         # Simpan transkrip ke file
         _save_transcript(filename, raw_transcript)
 
-        # ── FIX #4: Language Detection ───────────
+        # ── Language Detection ───────────
         lang_info = detect_languages(raw_transcript)
         result["stt"]["detected_langs"] = lang_info["languages"]
         print(f"[PIPELINE] Bahasa terdeteksi: {lang_info['languages']} → {filename}")
 
         # ── 2. LLM ──────────────────────────────
-        # FIX #4: Bangun prompt dengan language tagging (bukan normalize biasa)
-        # FIX #3: Kirim mode ke generate_response
+        # Bangun prompt dengan language tagging (bukan normalize biasa)
+        # Kirim mode ke generate_response
         tagged_prompt = build_tagged_prompt(raw_transcript)
 
         # Reset history agar tiap audio independen

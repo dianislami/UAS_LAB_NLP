@@ -1,7 +1,3 @@
-"""
-gradio_app/app.py - Frontend Gradio untuk Voice Chatbot
-"""
-
 import os
 import json
 import tempfile
@@ -160,21 +156,20 @@ with gr.Blocks(title="🎙️ Voice Chatbot") as demo:
                 placeholder="Transkripsi dan respons LLM akan muncul di sini...",
             )
 
-    # FIX: outputs sekarang 4, sesuai dengan jumlah return value voice_chat
     submit_btn.click(
         fn=voice_chat,
         inputs=[audio_input, history_state],
         outputs=[audio_output, info_box, status_box, history_state],
     )
 
-    # FIX: reset audio juga bersihkan info_box dan status_box
+    # reset audio juga bersihkan info_box dan status_box
     reset_audio_btn.click(
         fn=reset_audio,
         inputs=None,
         outputs=[audio_input, info_box, status_box],
     )
 
-    # FIX: tombol reset history memanggil backend DELETE /reset-history
+    # tombol reset history memanggil backend DELETE /reset-history
     reset_history_btn.click(
         fn=reset_history,
         inputs=[history_state],
