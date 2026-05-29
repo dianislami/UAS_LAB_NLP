@@ -1,0 +1,218 @@
+LAPORAN WER & CER - UAS Praktikum NLP 2025/2026 Genap
+Total file dianalisis : 571
+Total file dilewati   : 0
+
+══════════════════════════════════════════════════════════════════════════════
+  STATISTIK GLOBAL
+══════════════════════════════════════════════════════════════════════════════
+WER (Word Error Rate)
+  Rata-rata : 19.48%
+  Median    : 9.09%
+  Min       : 0.00%
+  Max       : 350.00%
+  Good <50% : 489/571 (85.6%)
+  Good <25% : 415/571 (72.7%)
+
+CER (Character Error Rate)
+  Rata-rata : 8.84%
+  Median    : 1.61%
+  Min       : 0.00%
+  Max       : 222.64%
+  Good <50% : 535/571 (93.7%)
+  Good <25% : 531/571 (93.0%)
+
+══════════════════════════════════════════════════════════════════════════════
+  WER & CER PER NOMOR SOAL
+══════════════════════════════════════════════════════════════════════════════
+  Q |    N |       Lang |           Intent |  WER avg | WER min | WER max |  CER avg | CER min | CER max
+──────────────────────────────────────────────────────────────────────────────
+  1 |   56 |         ID |         Commands |    8.93% |   0.00% | 145.45% |    4.32% |   0.00% | 119.35%
+  2 |   56 |         ID |         Commands |    8.13% |   0.00% | 100.00% |    3.29% |   0.00% |  67.86%
+  3 |   56 |   CS_EN_ID |         Commands |    2.60% |   0.00% |  18.18% |    1.06% |   0.00% |  13.64%
+  4 |   56 |   CS_EN_ID |      Instruction |    0.36% |   0.00% |  10.00% |    0.13% |   0.00% |   3.64%
+  5 |   56 |   CS_AR_ID |         Commands |   51.97% |  26.32% | 100.00% |   19.14% |   4.50% |  90.99%
+  6 |   56 |         AR |         Commands |   45.54% |   0.00% | 350.00% |   14.12% |   0.00% | 222.64%
+  7 |   35 |         ID |         Commands |    5.71% |   0.00% | 100.00% |    3.54% |   0.00% |  74.63%
+  8 |    9 |   CS_AR_ID |         Commands |   81.48% |  11.11% | 100.00% |   68.35% |   1.89% |  98.11%
+  9 |   10 |   CS_AR_ID |         Commands |   82.22% |  11.11% | 133.33% |   57.86% |   3.57% |  87.50%
+ 10 |   21 |         ID |     Info-Seeking |   45.50% |   0.00% | 122.22% |   31.13% |   0.00% |  96.30%
+ 11 |   20 |   CS_EN_ID |     Info-Seeking |    8.12% |   0.00% | 137.50% |    5.85% |   0.00% | 102.13%
+ 12 |   21 |         ID |     Info-Seeking |    7.94% |   0.00% |  88.89% |    3.25% |   0.00% |  57.14%
+ 13 |   22 |         ID |      Instruction |    8.26% |   0.00% | 100.00% |    4.83% |   0.00% |  86.15%
+ 14 |   24 |   CS_EN_ID |      Instruction |   10.18% |   0.00% | 111.11% |    4.47% |   0.00% |  85.71%
+ 15 |   24 |         ID |      Instruction |   23.15% |   0.00% | 111.11% |    5.75% |   0.00% |  77.27%
+ 16 |    7 |         ID |      Instruction |    5.95% |   0.00% |  16.67% |    2.21% |   0.00% |   7.04%
+ 17 |   23 |         ID |   Conversational |    6.09% |   0.00% |  20.00% |    2.14% |   0.00% |   8.47%
+ 18 |    9 |   CS_EN_ID |   Conversational |    8.64% |   0.00% |  33.33% |    2.41% |   0.00% |  15.00%
+ 19 |    6 |   CS_AR_ID |   Conversational |   22.92% |   0.00% |  37.50% |    2.78% |   0.00% |   4.17%
+ 20 |    4 |         ID |   Transformation |   30.00% |   0.00% | 100.00% |   20.61% |   0.00% |  75.44%
+
+══════════════════════════════════════════════════════════════════════════════
+  WER & CER PER KELOMPOK BAHASA
+══════════════════════════════════════════════════════════════════════════════
+      Bahasa |    N |  WER avg |  WER med | WER min | WER max |  CER avg |  CER med
+──────────────────────────────────────────────────────────────────────────────
+          ID |  269 |   12.33% |    9.09% |   0.00% | 145.45% |    6.18% |    1.54%
+    CS_EN_ID |  165 |    3.94% |    0.00% |   0.00% | 137.50% |    1.89% |    0.00%
+    CS_AR_ID |   81 |   56.83% |   52.63% |   0.00% | 133.33% |   28.18% |   15.32%
+          AR |   56 |   45.54% |   37.50% |   0.00% | 350.00% |   14.12% |    7.55%
+
+══════════════════════════════════════════════════════════════════════════════
+  WER & CER PER KATEGORI INTENT
+══════════════════════════════════════════════════════════════════════════════
+        Kategori |    N |  WER avg | WER min | WER max |  CER avg | CER min | CER max
+──────────────────────────────────────────────────────────────────────────────
+        Commands |  334 |   24.90% |   0.00% | 350.00% |   10.97% |   0.00% | 222.64%
+    Info-Seeking |   62 |   20.72% |   0.00% | 137.50% |   13.53% |   0.00% | 102.13%
+     Instruction |  133 |    7.85% |   0.00% | 111.11% |    2.81% |   0.00% |  86.15%
+  Conversational |   38 |    9.35% |   0.00% |  37.50% |    2.30% |   0.00% |  15.00%
+  Transformation |    4 |   30.00% |   0.00% | 100.00% |   20.61% |   0.00% |  75.44%
+
+══════════════════════════════════════════════════════════════════════════════
+  WER & CER PER MAHASISWA (NPM)
+══════════════════════════════════════════════════════════════════════════════
+   NPM |   N |  WER avg | WER min | WER max |  CER avg | CER min | CER max
+──────────────────────────────────────────────────────────────────────────────
+  2305 |  10 |    5.13% |   0.00% |  26.32% |    1.20% |   0.00% |   6.31%
+  2359 |  10 |    7.24% |   0.00% |  47.37% |    2.28% |   0.00% |  17.12%
+  2332 |  10 |    7.43% |   0.00% |  37.50% |    1.38% |   0.00% |   8.11%
+  2323 |  11 |    8.42% |   0.00% |  47.37% |    2.03% |   0.00% |   9.91%
+  2347 |  10 |    8.67% |   0.00% |  52.63% |    2.17% |   0.00% |  14.41%
+  2371 |  10 |    8.68% |   0.00% |  50.00% |    1.85% |   0.00% |  11.32%
+  2337 |  10 |    8.79% |   0.00% |  42.11% |    1.89% |   0.00% |   9.91%
+  2303 |  10 |    9.20% |   0.00% |  57.89% |    3.10% |   0.00% |  18.92%
+  2326 |  10 |    9.53% |   0.00% |  42.11% |    2.93% |   0.00% |  13.21%
+  2351 |  10 |    9.85% |   0.00% |  52.63% |    2.85% |   0.00% |  14.41%
+  2336 |  10 |   10.04% |   0.00% |  36.84% |    2.20% |   0.00% |   9.01%
+  2339 |  10 |   10.12% |   0.00% |  42.11% |    2.41% |   0.00% |   9.91%
+  2356 |  10 |   10.70% |   0.00% |  50.00% |    1.91% |   0.00% |   8.11%
+  2363 |  10 |   10.94% |   0.00% |  47.37% |    3.99% |   0.00% |  12.77%
+  2479 |   2 |   11.11% |   0.00% |  22.22% |    1.51% |   0.00% |   3.03%
+  2312 |  11 |   11.48% |   0.00% |  52.63% |    3.07% |   0.00% |  17.12%
+  2222 |  10 |   11.56% |   0.00% |  57.89% |    3.32% |   0.00% |  18.92%
+  2357 |  10 |   11.62% |   0.00% |  57.89% |    2.96% |   0.00% |  17.12%
+  2360 |  10 |   12.14% |   0.00% |  52.63% |    3.26% |   0.00% |  19.82%
+  2307 |  10 |   12.54% |   0.00% |  47.37% |    2.79% |   0.00% |  14.41%
+  2364 |  10 |   12.63% |   0.00% |  42.11% |    3.38% |   0.00% |  13.51%
+  2330 |  11 |   12.70% |   0.00% |  42.11% |    3.29% |   0.00% |  16.22%
+  2335 |  11 |   13.07% |   0.00% |  57.89% |    3.62% |   0.00% |  20.72%
+  2348 |  10 |   13.09% |   0.00% |  37.50% |    3.65% |   0.00% |  12.90%
+  2366 |  10 |   13.46% |   0.00% |  52.63% |    2.75% |   0.00% |  11.71%
+  2362 |  11 |   13.46% |   0.00% |  52.63% |    3.61% |   0.00% |  16.22%
+  2372 |  10 |   13.64% |   0.00% |  57.89% |    3.24% |   0.00% |  20.72%
+  2331 |  10 |   14.18% |   0.00% |  50.00% |    2.97% |   0.00% |  13.51%
+  2342 |  10 |   14.32% |   0.00% |  47.37% |    3.34% |   0.00% |  16.22%
+  2338 |  10 |   14.79% |   0.00% |  62.50% |    2.82% |   0.00% |  10.81%
+  2301 |  10 |   14.89% |   0.00% |  50.00% |    3.90% |   0.00% |  16.98%
+  2374 |  10 |   14.92% |   0.00% |  57.89% |    4.39% |   0.00% |  18.92%
+  2308 |  10 |   15.23% |   0.00% |  52.63% |    3.48% |   0.00% |  16.22%
+  2318 |  10 |   15.63% |   0.00% |  68.42% |    5.08% |   0.00% |  19.82%
+  2344 |  10 |   16.13% |   0.00% |  42.11% |    3.91% |   0.00% |  10.81%
+  2355 |  10 |   16.21% |   0.00% |  52.63% |    4.43% |   0.00% |  15.32%
+unknown |   1 |   16.67% |  16.67% |  16.67% |    7.04% |   7.04% |   7.04%
+  2367 |  10 |   16.94% |   0.00% |  87.50% |    3.74% |   0.00% |  15.09%
+  2358 |  10 |   17.20% |   0.00% |  68.42% |    7.24% |   0.00% |  53.15%
+  2343 |  10 |   17.31% |   0.00% |  75.00% |    6.51% |   0.00% |  22.64%
+  2304 |  10 |   17.64% |   0.00% |  52.63% |    4.64% |   0.00% |  15.09%
+  2313 |  10 |   18.13% |   0.00% | 100.00% |   11.10% |   0.00% |  90.99%
+  2333 |   9 |   18.89% |   0.00% |  50.00% |    4.86% |   0.00% |  13.51%
+  2311 |  10 |   19.02% |   0.00% |  57.89% |    6.78% |   0.00% |  20.72%
+  2302 |  10 |   19.12% |   0.00% |  63.16% |    4.31% |   0.00% |  15.09%
+  2319 |  10 |   19.40% |   0.00% |  63.16% |    5.77% |   0.00% |  25.23%
+  2375 |  10 |   20.26% |   0.00% |  66.67% |    6.12% |   0.00% |  32.08%
+  2309 |  10 |   20.48% |   0.00% |  89.47% |   10.13% |   0.00% |  58.56%
+  2310 |  10 |   20.70% |   0.00% | 100.00% |   10.10% |   0.00% |  75.44%
+  2379 |   8 |   20.78% |   0.00% |  75.00% |    6.02% |   0.00% |  20.72%
+  2369 |  10 |   31.74% |   0.00% | 122.22% |   20.06% |   0.00% |  94.44%
+  2334 |  10 |   40.03% |   0.00% | 111.11% |   28.53% |   0.00% |  98.11%
+  2306 |  11 |   44.75% |   0.00% | 350.00% |   25.43% |   0.00% | 222.64%
+  2325 |  10 |   47.20% |   0.00% | 100.00% |   35.52% |   0.00% |  88.89%
+  2341 |  20 |   48.30% |   0.00% | 111.11% |   31.62% |   0.00% |  96.23%
+  2345 |  15 |   64.06% |   0.00% | 137.50% |   46.24% |   0.00% | 102.13%
+  2128 |  10 |   89.10% |   0.00% | 145.45% |   66.47% |   0.00% | 119.35%
+
+══════════════════════════════════════════════════════════════════════════════
+  TOP 10 FILE — WER TERBAIK (TERENDAH)
+══════════════════════════════════════════════════════════════════════════════
+   1. [2222_audio1.wav]  WER=0.00%  CER=0.00%
+      STT : Aku mau book flight ke Jeddah minggu depan, bisa bantu schedule.
+      REF : aku mau book flight ke Jeddah minggu depan bisa bantu schedule
+
+   2. [2222_audio12.wav]  WER=0.00%  CER=0.00%
+      STT : Bagaimana proses visa Saudi untuk umrah dari Indonesia sekarang?
+      REF : bagaimana proses visa Saudi untuk umrah dari Indonesia sekarang
+
+   3. [2222_audio14.wav]  WER=0.00%  CER=0.00%
+      STT : How to prepare dokumen umrah dari Indonesia dengan benar?
+      REF : how to prepare dokumen umrah dari Indonesia dengan benar
+
+   4. [2222_audio2.wav]  WER=0.00%  CER=0.00%
+      STT : Aku butuh travel umrah simple, tapi include madinah visit.
+      REF : aku butuh travel umrah simple tapi include Madinah visit
+
+   5. [2222_audio4.wav]  WER=0.00%  CER=0.00%
+      STT : Explain step by step cara apply VISA Saudi dengan benar.
+      REF : explain step by step cara apply visa Saudi dengan benar
+
+   6. [2222_audio7.wav]  WER=0.00%  CER=0.00%
+      STT : Book flight ke Jeddah lalu lanjut ke Madinah. Schedule terbaik kapan?
+      REF : book flight ke Jeddah lalu lanjut ke Madinah schedule terbaik kapan
+
+   7. [2301_audio11.wav]  WER=0.00%  CER=0.00%
+      STT : Kenapa fasting di Ramadan itu wajib bagi Muslim?
+      REF : kenapa fasting di ramadan itu wajib bagi Muslim
+
+   8. [2301_audio2.wav]  WER=0.00%  CER=0.00%
+      STT : Aku butuh travel umrah simple, tapi include Madinah visit.
+      REF : aku butuh travel umrah simple tapi include Madinah visit
+
+   9. [2301_audio3.wav]  WER=0.00%  CER=0.00%
+      STT : Can you help aku arrange transport dari Jeddah ke Madinah tomorrow?
+      REF : can you help aku arrange transport dari Jeddah ke Madinah tomorrow
+
+  10. [2301_audio4.wav]  WER=0.00%  CER=0.00%
+      STT : Explain step by step cara apply visa Saudi dengan benar.
+      REF : explain step by step cara apply visa Saudi dengan benar
+
+══════════════════════════════════════════════════════════════════════════════
+  TOP 10 FILE — WER TERBURUK (TERTINGGI)
+══════════════════════════════════════════════════════════════════════════════
+   1. [2306_Audio06.wav]  WER=350.00%  CER=222.64%
+      STT : Salut er encouraged in manner to popular هنا, not to be a connection with German
+      REF : uridu arrange transport min Jeddah ila Madinah ghadan
+
+   2. [2128_audio1.wav]  WER=145.45%  CER=119.35%
+      STT : Ya al-Qi, Uridu Bukflek ila Jeddah al-Usbu' al-Qadim hal bisa bantu Ajidah Afdal
+      REF : aku mau book flight ke Jeddah minggu depan bisa bantu schedule
+
+   3. [2345_audio11.wav]  WER=137.50%  CER=102.13%
+      STT : Jelaskan step by step cara booking flight ke jeddah secara online.
+      REF : kenapa fasting di ramadan itu wajib bagi Muslim
+
+   4. [2128_audio9.wav]  WER=133.33%  CER=87.50%
+      STT : Guet aku cara pilih hotel di Mekah dekat Haram dengan budget terbatas.
+      REF : mumkin book transport min Makkah ila Madinah untuk besok
+
+   5. [2369_audio10.wav]  WER=122.22%  CER=94.44%
+      STT : Jelaskan step by step cara booking flight ke Jeddah secara online.
+      REF : apa perbedaan umrah dan hajj secara detail dalam Islam
+
+   6. [2128_audio10.wav]  WER=122.22%  CER=87.04%
+      STT : Jelaskan step by step cara booking flag ke jeda secara online.
+      REF : apa perbedaan umrah dan hajj secara detail dalam Islam
+
+   7. [2128_audio6.wav]  WER=112.50%  CER=71.70%
+      STT : Aku butuh travel umrah simple, tapi ikut Medina Fisit.
+      REF : uridu arrange transport min Jeddah ila Madinah ghadan
+
+   8. [2334_audio10.wav]  WER=111.11%  CER=85.19%
+      STT : Menurut kamu, belajar bahasa Arab itu susah nggak untuk pemula?
+      REF : apa perbedaan umrah dan hajj secara detail dalam Islam
+
+   9. [2341_audio10(1).wav]  WER=111.11%  CER=85.19%
+      STT : Menurut kamu, belajar Bahasa Arab itu susah gak untuk pemula?
+      REF : apa perbedaan umrah dan hajj secara detail dalam Islam
+
+  10. [2341_audio10.wav]  WER=111.11%  CER=85.19%
+      STT : Menurut kamu, belajar Bahasa Arab itu susah gak untuk pemula?
+      REF : apa perbedaan umrah dan hajj secara detail dalam Islam
