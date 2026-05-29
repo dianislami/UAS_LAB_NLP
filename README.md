@@ -34,6 +34,8 @@ voice_chatbot_project/
 │   ├── pipeline_results.json   ← Hasil detail per file
 │   └── pipeline_summary.txt    ← Ringkasan evaluasi pipeline
 ├── analisis_pipeline.py    ← Script batch processing semua audio
+├── wer_cer_analysis.py     ← Script analisa WER dan CER semua audio
+├── wer_cer_summary.txt     ← Hasil analisis WER dan CER semua audio
 ├── .env                    ← API key
 ├── .gitignore
 ├── requirements.txt
